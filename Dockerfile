@@ -8,5 +8,4 @@ RUN apt-get update && apt-get install -y wget unzip && \
     rm google-chrome-stable_current_amd64.deb && \
     apt-get clean
     
-CMD ["cd tests"]
-CMD ["pytest","test_login_page.py --browser=chrome"]
+CMD ["pytest","tests/test_login_page.py --browser=chrome"]
