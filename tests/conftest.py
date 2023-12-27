@@ -1,10 +1,11 @@
 import pytest
-from selenium import webdriver
-from selenium.webdriver.chrome.service import Service
-from webdriver_manager.chrome import ChromeDriverManager
+#from selenium import webdriver
+#from selenium.webdriver.chrome.service import Service
+#from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.chrome.webdriver import WebDriver
 from selenium.webdriver.firefox.service import Service as FirefoxService
 from webdriver_manager.firefox import GeckoDriverManager
-from selenium.webdriver.chrome.options import Options
 
 chr_options = Options()
 chr_options.add_argument('--no-sandbox')
@@ -18,7 +19,9 @@ def driver(request):
     # browser = request.param
     print(f"Creating {browser} driver")
     if browser == "chrome":
-        my_driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()),options=chr_options)
+        #my_driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()),options=chr_options)
+        my_driver = WebDriver(options=chr_options)
+        request.cls.driver = driver
     elif browser == "firefox":
         my_driver = webdriver.Firefox(service=FirefoxService(GeckoDriverManager().install()),options=chr_options)
     else:
