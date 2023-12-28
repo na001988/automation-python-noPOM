@@ -15,6 +15,6 @@ COPY /tests/*.py /app/
 RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 
-CMD ["pytest", "test_login_page.py --browser=chrome"]
+CMD ["pytest", "test_login_page.py", "--browser=chrome"]
 
 
