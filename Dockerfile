@@ -16,4 +16,4 @@ RUN pip install -r requirements.txt
 
 #CMD ["pytest", "test_login_page.py --browser=chrome"]
 
-ENTRYPOINT ["pwd","ls -ll"]
+ENTRYPOINT ["pwd","cd tests","pwd","ls"]
