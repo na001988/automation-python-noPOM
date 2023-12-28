@@ -7,14 +7,20 @@ RUN apk update \
     && apk add chromium chromium-chromedriver \
     && apk add libffi-dev
 
-WORKDIR /app/tests
+WORKDIR /app
 
 COPY . ./
 
 RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 
-CMD ["pytest", "test_login_page.py --browser=chrome"]
+ENTRYPOINT ["/bin/ash"]
+
+CMD ["cd tests"]
+
+CMD ["pwd"]
+
+#CMD ["pytest", "test_login_page.py --browser=chrome"]
 
 #ENTRYPOINT ["pytest", "test_login_page.py --browser=chrome"]
 
