@@ -9,8 +9,8 @@ RUN apk update \
 
 WORKDIR /app
 
-COPY *.txt **.py /app/
-#COPY /tests/*.py /app/
+COPY *.txt /app/
+COPY /tests/*.py /app/
 
 RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
