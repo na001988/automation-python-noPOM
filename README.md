@@ -1,8 +1,8 @@
 # login to container alpine:
-docker run -it <container> /bin/ash
+docker run -it containerName /bin/ash
 
 # login to container linux:
-docker run -it <container> /bin/bash
+docker run -it containerName /bin/bash
 
 # build docker image:
 docker build -t name:tag .
