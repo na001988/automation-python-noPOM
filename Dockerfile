@@ -18,9 +18,7 @@ ENTRYPOINT ["/bin/ash"]
 
 CMD ["cd tests"]
 
-CMD ["pwd"]
-
-#CMD ["pytest", "test_login_page.py --browser=chrome"]
+CMD ["pytest", "test_login_page.py --browser=chrome"]
 
 #ENTRYPOINT ["pytest", "test_login_page.py --browser=chrome"]
 
