@@ -9,12 +9,11 @@ RUN apk update \
 
 WORKDIR /app
 
-COPY . ./
+COPY *.txt *.py /app
 
 RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 
-CMD ["pytest", "tests/test_login_page.py --browser=chrome"]
+CMD ["pytest", "test_login_page.py --browser=chrome"]
 
-#ENTRYPOINT ["pytest", "test_login_page.py --browser=chrome"]
 
