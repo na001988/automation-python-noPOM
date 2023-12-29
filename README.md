@@ -3,7 +3,8 @@
 - Clone the project
 - Navigate to the project folder
 - Install dependencies: pip install -r requirements.txt
-- Execute a test from command line: pytest tests/test_login_page.py --browser=chrome 
+- Execute a test from command line: pytest tests/test_login_page.py --browser=chrome
+- Obtain reports from command line: pytest tests/test_login_page.py --browser=chrome --html=reports/reports.html 
 
 ## Steps to run the project using containers:
 - Clone the project
