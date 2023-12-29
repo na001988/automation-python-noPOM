@@ -17,4 +17,16 @@ jobs:
         if: success() || failure()
       - run: |
           cd tests
-          pytest test_login_page.py --browser=chrome
+          mkdir -p reports
+          pytest test_login_page.py --browser=firefox --html=reports/reports.html
+          chmod 777  /home/runner/work/automation-python-noPOM/automation-python-noPOM/tests/reports/
+      - name: Set output
+        if: success() || failure()
+        id: results
+        run: echo "artifactPath=tests/reports/" >> $GITHUB_OUTPUT
+
+      - uses: actions/upload-artifact@v3
+        if: success() || failure()
+        with:
+          name: test-report
+          path: ${{ steps.results.outputs.artifactPath }}
