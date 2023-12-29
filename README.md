@@ -6,6 +6,8 @@
 - Execute a test from command line: pytest tests/test_login_page.py --browser=chrome
 - Obtain reports from command line: pytest tests/test_login_page.py --browser=chrome --html=reports/reports.html 
 
+![image](https://github.com/na001988/automation-python-noPOM/assets/49047445/9f389596-7842-4286-839b-021a30b243bf)
+
 ## Steps to run the project using containers:
 - Clone the project
 - Navigate to the project folder
