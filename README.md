@@ -33,4 +33,4 @@ docker run -it python-alpine:v1 /bin/bash
 ## to run container with parameters:
 docker run containerName -e variable1 -e variable2
 
-# to-do: copy reports of tests into docker alpine
+# to-do: generate test-reports into docker
