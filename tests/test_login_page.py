@@ -47,5 +47,5 @@ class TestPositiveScenarios:
         log_out_button_locator = driver.find_element(By.LINK_TEXT, "Log out")
         assert log_out_button_locator.is_displayed()
 
-finally:
-        driver.quit()
+        finally:
+                driver.quit()
