@@ -15,7 +15,7 @@ class TestPositiveScenarios:
     @pytest.mark.positive
     def test_positive_login(self, driver):
         base_url = "https://practicetestautomation.com/practice-test-login/"
-        try:
+
         wait = WebDriverWait(driver, 10)
         # Go to webpage
         driver.get(base_url)
@@ -47,5 +47,3 @@ class TestPositiveScenarios:
         log_out_button_locator = driver.find_element(By.LINK_TEXT, "Log out")
         assert log_out_button_locator.is_displayed()
 
-        finally:
-                driver.quit()
