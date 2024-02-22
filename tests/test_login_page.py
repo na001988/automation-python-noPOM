@@ -2,6 +2,8 @@ import time
 
 import pytest
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support.wait import WebDriverWait as DW
+from selenium.webdriver.support.wait import expected_conditions as EC
 
 #static wait = seelp
 #implicit wait = retry every set time
@@ -12,9 +14,12 @@ class TestPositiveScenarios:
     @pytest.mark.login
     @pytest.mark.positive
     def test_positive_login(self, driver):
+        base_url = "https://practicetestautomation.com/practice-test-login/"
+        try:
+        wait = WebDriverWait(driver, 10)
         # Go to webpage
-        driver.get("https://practicetestautomation.com/practice-test-login/")
-        time.sleep(2)
+        driver.get(base_url)
+        wait.until(EC.url_to_be(base_url))
 
         # Type username student into Username field
         username_locator = driver.find_element(By.ID, "username")
@@ -41,3 +46,6 @@ class TestPositiveScenarios:
         # Verify button Log out is displayed on the new page
         log_out_button_locator = driver.find_element(By.LINK_TEXT, "Log out")
         assert log_out_button_locator.is_displayed()
+
+finally:
+        driver.quit()
