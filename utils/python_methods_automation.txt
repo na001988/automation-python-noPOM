@@ -4,3 +4,9 @@ variable = driver.window_handles
 driver.switch_to.window(handle)
 # get the handle of the current active window
 variable = driver.curent_window_handle
+# switch to a frame
+driver.switch_to.frame(frame)
+# switch focus to parent
+driver.switch_to.parent_frame()
+# switch focus to default or back
+driver.switch_to.default_content()
