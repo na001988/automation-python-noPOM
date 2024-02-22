@@ -1,0 +1,6 @@
+# get a list od id's for all available windows
+variable = driver.window_handles
+# switch to a given window by ist handle
+driver.switch_to.window(handle)
+# get the handle of the current active window
+variable = driver.curent_window_handle
