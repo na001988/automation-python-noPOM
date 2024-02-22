@@ -23,8 +23,9 @@ class TestPositiveScenarios:
 
         # Type username student into Username field
         # username_locator = driver.find_element(By.ID, "username")
+        username_locator = (By.ID, "username")
         wait.until(EC.presence_of_element_located(
-            (By.ID, "username")
+            username_locator
         ))
         username_locator.send_keys("student")
 
