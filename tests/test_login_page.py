@@ -3,6 +3,9 @@ import time
 import pytest
 from selenium.webdriver.common.by import By
 
+//static wait = seelp
+//implicit wait = retry every set time
+//explicit waits: state using client-side methods
 
 class TestPositiveScenarios:
 
