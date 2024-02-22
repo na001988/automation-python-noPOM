@@ -22,11 +22,11 @@ class TestPositiveScenarios:
         wait.until(EC.url_to_be(base_url))
 
         # Type username student into Username field
-        wait.until(EC.presence_of_element_located(
+        uName = wait.until(EC.presence_of_element_located(
             (By.ID, "username")
         ))
         
-        driver.find_element(By.ID, "username").send_keys("student")
+        uName.send_keys("student")
 
         # Type password Password123 into Password field
         password_locator = driver.find_element(By.NAME, "password")
