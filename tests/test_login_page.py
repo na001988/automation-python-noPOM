@@ -3,7 +3,7 @@ import time
 import pytest
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait as DW
-from selenium.webdriver.support.wait import expected_conditions as EC
+from selenium.webdriver.support import expected_conditions as EC
 
 #static wait = seelp
 #implicit wait = retry every set time
