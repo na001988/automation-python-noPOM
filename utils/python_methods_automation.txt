@@ -10,3 +10,13 @@ driver.switch_to.frame(frame)
 driver.switch_to.parent_frame()
 # switch focus to default or back
 driver.switch_to.default_content()
+# switch context to alert
+alert = driver.switch_to.alert
+# press ok
+alert.accept()
+# press cancel
+alert.dismiss()
+# get text displayed in alert
+variable = alert.text
+# send keystrokes into a promt in the alert
+alert.send_keys('some-text')
